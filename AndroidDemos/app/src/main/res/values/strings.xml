@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">AndroidDemos</string>
-    <string name="act_bezier">贝塞尔曲线</string>
-    <string name="act_wave">波浪</string>
-    <string name="act_ripple_circle">水波纹</string>
-    <string name="title_activity_http_server">Http服务器</string>
+    <string name="activity_bezier">贝塞尔曲线</string>
+    <string name="activity_wave">波浪</string>
+    <string name="activity_ripple_circle">水波纹</string>
+    <string name="activity_http_server">Socket实现Http服务器</string>
+    <string name="activity_paint">SurfaceView画板</string>
     <string name="start_server">启动Web服务器</string>
+    <string name="activity_camera_view">SurfaceView显示相机</string>
 </resources>

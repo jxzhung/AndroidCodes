@@ -16,6 +16,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * 入口界面
+ */
 public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
     private ActivityInfo[] infos;
