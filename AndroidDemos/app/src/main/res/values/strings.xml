@@ -7,4 +7,5 @@
     <string name="activity_paint">SurfaceView画板</string>
     <string name="start_server">启动Web服务器</string>
     <string name="activity_camera_view">SurfaceView显示相机</string>
+    <string name="activity_sensor">传感器</string>
 </resources>

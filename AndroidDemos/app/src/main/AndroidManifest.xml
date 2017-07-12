@@ -68,6 +68,14 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".sensor.OrientationCheckActivity"
+            android:label="@string/activity_sensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
