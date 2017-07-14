@@ -38,11 +38,18 @@ public class FreeDrawView extends View {
 
         paint = new Paint();
         paint.setColor(Color.BLUE);
-        paint.setStrokeWidth(20);
+        paint.setStrokeWidth(50);
         paint.setStyle(Paint.Style.STROKE);
+        //笔头形状
+        paint.setStrokeCap(Paint.Cap.ROUND);
 
-        mPathMeasure = new PathMeasure(mPath, false);
+        mPath = new Path();
         mPath.lineTo(600, 600);
+        mPath.addRect(650, 700, 900, 890, Path.Direction.CW);
+        mPath.addCircle(1100, 1300, 50, Path.Direction.CW);
+        mPathMeasure = new PathMeasure(mPath, false);
+        float length = mPathMeasure.getLength();
+        Log.i(TAG, "path length = " + length);
     }
 
     public FreeDrawView(Context context, AttributeSet attrs) {
@@ -54,8 +61,16 @@ public class FreeDrawView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         Log.i(TAG, "onDraw: 绘制");
-        canvas.drawColor(Color.GRAY);
-        canvas.drawRect(100, 100, 800, 800, paint);
+        canvas.drawColor(Color.WHITE);
+        canvas.drawCircle(400, 400, 300, paint);
+        canvas.drawPoint(600, 850, paint);
+        //canvas.drawRect(100, 100, 800, 800, paint);
+        //canvas.drawColor(Color.parseColor("#88880000"));
+
+        float[] points = {0, 0, 50, 50, 50, 100, 100, 50, 100, 100, 150, 50, 150, 100};
+// 绘制四个点：(50, 50) (50, 100) (100, 50) (100, 100)
+        canvas.drawPoints(points, 2 /* 跳过两个数，即前两个 0 */,
+                8 /* 一共绘制 8 个数（4 个点）*/, paint);
     }
 
     @Override
